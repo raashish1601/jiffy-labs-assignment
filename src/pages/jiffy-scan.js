@@ -1,7 +1,9 @@
-export default function Home() {
+function Home() {
   return (
     <>
       Hello World
     </>
   );
-}
+};
+
+export default Home;
