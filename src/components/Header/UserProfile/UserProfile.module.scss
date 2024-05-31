@@ -1,0 +1,33 @@
+@import "../../../styles/mixins.scss";
+
+.profileContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    position: relative;
+
+    &_initials{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: red;
+        color: #195BDF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include typography('Inter', 16px, 500, 24px);
+    }
+
+    &_info{
+        &--name{
+            color: #1F1F1F;
+            @include typography('Inter', 14px, 600, 14px);
+        }
+        &--email{
+            color:#5A5A62;
+            @include typography('Inter', 14px, 400, 20px);
+        }
+    }
+}
