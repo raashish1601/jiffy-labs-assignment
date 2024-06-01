@@ -8,8 +8,10 @@ export default function App({ Component, pageProps }) {
   return (
     <AuthProvider>
       <ThemeProvider>
+        <div>
         <Header />
         <Component {...pageProps} />
+        </div>
       </ThemeProvider>
     </AuthProvider>
   );
