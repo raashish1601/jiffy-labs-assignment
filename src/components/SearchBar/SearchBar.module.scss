@@ -1,0 +1,32 @@
+.searchBarContainer {
+    position: relative;
+    width: 412px;
+    height: 46px;
+    border-radius: 42px;
+    background: #F1F5F9;
+    display: flex;
+    align-items: center;
+    padding: 0 28px 0 40px; 
+    gap:16px;
+}
+
+.searchBar {
+    flex: 1;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #9E9E9E;
+
+    &:focus {
+        outline: none;
+        color: #252424;
+    }
+}
+
+.icon {
+    position: absolute;
+    left: 10px; 
+    width: 12.58px;
+    height: 20.83px;
+}

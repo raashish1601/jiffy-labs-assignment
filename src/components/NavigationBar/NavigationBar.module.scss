@@ -1,0 +1,75 @@
+@import '../../styles/mixins.scss';
+
+.navigationBarContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 35px;
+    border-bottom: 2px solid #EBEBEB;
+    padding-bottom: 25px;
+    width: 98%;
+    margin-top: 20px;
+
+    &_navigationBar {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        &_history {
+            color: #252424;
+            @include typography('Inter', 20px, 600, 28px);
+        }
+
+        &--divider {
+            border: 1px solid #CBD8E9;
+            height: 24px;
+        }
+
+        &_navList {
+            display: flex;
+            list-style-type: none;
+            gap: 24px;
+
+            &>a {
+                position:relative;
+                text-decoration: none;
+                color: #64758B;
+                @include typography('Inter', 18px, 400, 21.78px);
+            }
+
+            &--navItem {
+                cursor: pointer;
+            }
+
+            &--divider {
+                border-bottom: 2px solid #6366F1;
+                top: 53px;
+                position: absolute;
+                width: 100%;
+            }
+        }
+    }
+
+    &_filters {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+
+        &>label {
+            color: #64748B;
+            @include typography('Inter', 14px, 400, 18px);
+        }
+
+        &>select {
+            width: 152px;
+            height: 34px;
+            border-radius: 4px;
+            border: 1px solid #EBEBEB;
+            background: none;
+            color: #6366F1;
+            display: flex;
+            align-items: center;
+            @include typography('Inter', 14px, 500, 18px);
+        }
+    }
+}

@@ -1,0 +1,97 @@
+@import "../../styles/mixins.scss";
+
+.hackathonCard {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 8px;
+
+    &_details {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+
+        &_content {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            &--heading {
+                color: #252424;
+                @include typography('Inter', 16px, 600, 28px);
+                @include textOverflowInEllipses(1);
+
+                &--sponsor {
+                    color: #94A3B8;
+                    @include typography('Inter', 16px, 600, 28px);
+
+                    &>span {
+                        color: #64758B;
+                        @include typography('Inter', 13px, 400, 18px);
+                    }
+                }
+            }
+
+            &_userDetails {
+                display: flex;
+                gap: 16px;
+                align-items: center;
+
+                &--price {
+                    display: flex;
+                    align-items: inherit;
+                    color: #252424;
+                    @include typography('Inter', 16px, 600, 28px);
+
+                    &>span {
+                        color: #94A3B8;
+                        @include typography('Inter', 14px, 400, 18px);
+                    }
+                }
+
+                &--divider {
+                    border: 1px solid #CBD8E9;
+                    height: 18px;
+                }
+
+                &--position {
+                    color: #64758B;
+                    @include typography('Inter', 14px, 400, 18px);
+                }
+
+                &--domains {
+                    display: flex;
+                    gap: 16px;
+                }
+            }
+        }
+    }
+
+    &_info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        &--date {
+            color: #64758B;
+            margin-left: auto;
+            @include typography('Inter', 16px, 400, 18px);
+        }
+
+        &--participantsCount {
+            color: #252424;
+            @include typography('Inter', 16px, 400, 18px);
+
+            &>span {
+                color: #64758B;
+            }
+        }
+    }
+
+    &:hover{
+        background: #EDF2F7;
+    }
+}

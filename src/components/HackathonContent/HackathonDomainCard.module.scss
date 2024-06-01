@@ -1,0 +1,11 @@
+@import "../../styles/mixins.scss";
+
+.hackathonDomainCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    border-radius: 4px;
+    padding: 4px 12px 4px 12px;
+    @include typography('Inter', 12px, 400, 16px);
+}

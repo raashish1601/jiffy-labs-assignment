@@ -8,25 +8,34 @@
     cursor: pointer;
     position: relative;
 
-    &_initials{
+    &_initials {
+        position:relative;
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        background: red;
+        background: #F9F5FF;
         color: #195BDF;
         display: flex;
         justify-content: center;
         align-items: center;
         @include typography('Inter', 16px, 500, 24px);
+
+        &>img {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transform: scale(1.5);
+        }
     }
 
-    &_info{
-        &--name{
+    &_info {
+        &--name {
             color: #1F1F1F;
             @include typography('Inter', 14px, 600, 14px);
         }
-        &--email{
-            color:#5A5A62;
+
+        &--email {
+            color: #5A5A62;
             @include typography('Inter', 14px, 400, 20px);
         }
     }

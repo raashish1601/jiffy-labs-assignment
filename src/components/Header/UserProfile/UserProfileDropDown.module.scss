@@ -2,8 +2,8 @@
 
 .dropdownMenu {
     position: absolute;
-    top: 46px;
-    // right: 1px;
+    background: #fff;
+    top: 54px;
     width: 208px;
     border-radius: 8px;
     border: 1px solid #DADCE0;
@@ -11,11 +11,17 @@
     flex-direction: column;
     list-style-type: none;
     transition:  all .3s ease-in;
+    z-index:2;
+
+    &--profileIcon{
+        transform:scale(1.2);
+    }
 
     &>li {
         display: flex;
         justify-content: flex-start;
         align-items: center;
+        gap:14px;
         padding: 10px 16px 10px 16px;
 
         &>a{

@@ -5,7 +5,12 @@ const nextConfig = {
     return [
       {
         source: '/',
-        destination: '/jiffy-scan',
+        destination: '/hackathon/completed/',
+        permanent: true, 
+      },
+      {
+        source: '/hackathon',
+        destination: '/hackathon/completed/',
         permanent: true, 
       },
     ];
