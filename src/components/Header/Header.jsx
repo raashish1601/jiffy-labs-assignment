@@ -11,22 +11,22 @@ const Header = () => {
       <nav>
         <ul className={styles['header_navList']}>
           <li className={styles['header_navList--navItem']}>
-            <Link href="/jiffy-scan">Home</Link>
+            <Link href="#">Home</Link>
           </li>
           <li className={styles['header_navList--navItem']}>
-            <Link href="/jiffy-scan">Blockchain</Link>
+            <Link href="#">Blockchain</Link>
             <Image src="/assets/icons/downArrow.svg" alt="downArrow" width={12} height={7.42} />
           </li>
           <li className={styles['header_navList--navItem']}>
-            <Link href="/jiffy-scan">Developers</Link>
+            <Link href="#">Developers</Link>
             <Image src="/assets/icons/downArrow.svg" alt="downArrow" width={12} height={7.42} />
           </li>
           <li className={styles['header_navList--navItem']}>
-            <Link href="/jiffy-scan">More</Link>
+            <Link href="#">More</Link>
             <Image src="/assets/icons/downArrow.svg" alt="downArrow" width={12} height={7.42} />
           </li>
           <li className={styles['header_navList--navItem']}>
-            <Link href="/jiffy-scan">About4337</Link>
+            <Link href="#">About4337</Link>
           </li>
         </ul>
       </nav>
