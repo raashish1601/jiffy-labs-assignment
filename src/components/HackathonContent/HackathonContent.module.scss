@@ -1,3 +1,5 @@
-.hackathonContent{
-    // width: 60%;
+.hackathonContent {
+    &>div:first-child {
+        margin-top: 16px;
+    }
 }

@@ -55,6 +55,11 @@
         gap: 16px;
         align-items: center;
 
+        &--divider{
+            border: 1px solid #CBD8E9;
+            height:22px;
+        }
+
         &>label {
             color: #64748B;
             @include typography('Inter', 14px, 400, 18px);

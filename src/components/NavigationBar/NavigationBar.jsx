@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import styles from './NavigationBar.module.scss';
+import Image from 'next/image';
 
 function NavigationBar({ type }) {
     const [filter, setFilter] = useState('ALL');
@@ -38,6 +39,8 @@ function NavigationBar({ type }) {
                 </nav>
             </div>
             <div className={styles['navigationBarContainer_filters']}>
+                <div className={styles['navigationBarContainer_filters--divider']}/>
+                <Image src="/assets/icons/filter.svg" alt="filter-icon" width={16} height={9.5} />
                 <label htmlFor="filterDropdown" className={styles['navigationBarContainer_filters--label']}>Filter By:</label>
                 <select
                     id="filterDropdown"

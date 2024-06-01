@@ -3,7 +3,6 @@ import HackathonDomainCard from "./HackathonDomainCard";
 import styles from './HackathonCard.module.scss';
 
 function HackathonCard({ cardData }) {
-    console.log(cardData, "cardData");
 
     const date = new Date(cardData?.hackathon_date);
 
