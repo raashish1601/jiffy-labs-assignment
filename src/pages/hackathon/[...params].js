@@ -6,31 +6,33 @@ import useFetch from "@/hooks/use-fetch";
 import styles from './hackathon.module.scss';
 
 function Hackathon() {
-
-    const [type,setType] = useState("completed");
-
+    const [type, setType] = useState("completed");
     const router = useRouter();
     const { data, fetchData } = useFetch();
 
     useEffect(() => {
-        if (!router?.query?.params) return;
-        if(router?.query?.params[0] ==="completed"){
+        const { params } = router.query;
+        if (!params) return;
+
+        const hackathonType = params[0];
+        if (hackathonType === "completed") {
             fetchData('/api/completedHackathonData');
-        }else{
+            setType("completed");
+        } else if (hackathonType === "in-review") {
             fetchData('/api/inReviewHackathonData');
+            setType("in-review");
+        } else {
+            router.push('/404');
         }
-        setType(router?.query?.params[0]);
-    }, [router, router?.query?.params]);
+    }, [router, router?.query]);
 
     return (
         <div>
             <HackathonLayout type={type}>
-                <HackathonContent
-                    hackathonData={data}
-                />
+                <HackathonContent hackathonData={data} />
             </HackathonLayout>
         </div>
     );
-};
+}
 
 export default Hackathon;
