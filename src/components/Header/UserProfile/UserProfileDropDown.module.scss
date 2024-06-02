@@ -31,6 +31,12 @@
         }
     }
 
+    &>li:hover{
+        &>a{
+            text-decoration: underline;
+        }
+    }
+
     &>li:last-child {
         border-top: 1px solid #F3F4F7;
     }

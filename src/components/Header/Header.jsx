@@ -7,7 +7,9 @@ import UserProfile from './UserProfile/UserProfile';
 const Header = () => {
   return (
     <header className={styles['header']}>
-      <Image src="/assets/icons/logo.svg" alt="Logo" width={150} height={50} className={styles['header_logoImage']} />
+      <Link href="/hackathon/completed">
+        <Image src="/assets/icons/logo.svg" alt="Logo" width={150} height={50} className={styles['header_logoImage']} />
+      </Link>
       <nav>
         <ul className={styles['header_navList']}>
           <li className={styles['header_navList--navItem']}>
