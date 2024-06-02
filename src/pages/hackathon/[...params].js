@@ -7,10 +7,12 @@ import styles from './hackathon.module.scss';
 
 function Hackathon() {
     const [type, setType] = useState("completed");
+    const [filteredData, setFilteredData] = useState([]);
     const router = useRouter();
     const { data, fetchData } = useFetch();
 
     useEffect(() => {
+        console.log("router", router);
         const { params } = router.query;
         if (!params) return;
 
@@ -26,10 +28,20 @@ function Hackathon() {
         }
     }, [router, router?.query]);
 
+    useEffect(() => {
+        if (data) {
+            const filter = router.query.filterBy || "ALL";
+            const filtered = data.filter(item =>
+                filter === "ALL" || item.hackathon_domains.includes(filter)
+            );
+            setFilteredData(filtered);
+        }
+    }, [data,router?.query?.filterBy])
+
     return (
         <main tabIndex={-1}>
             <HackathonLayout type={type}>
-                <HackathonContent hackathonData={data} />
+                <HackathonContent hackathonData={filteredData} />
             </HackathonLayout>
         </main>
     );

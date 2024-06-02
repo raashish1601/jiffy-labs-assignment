@@ -22,6 +22,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            cursor: pointer;
             &>a {
                 text-decoration: none;
                 color: #5A5A62;
@@ -32,10 +33,11 @@
 
     &_userSection{
         display: flex;
+        align-items:center;
         margin: 0 30px;
-        gap: 20px;
-        &_themeImage{
-            transform: scale(0.7);
+        gap: 30px;
+
+        &>img{
             margin-bottom: 10px;
         }
     }

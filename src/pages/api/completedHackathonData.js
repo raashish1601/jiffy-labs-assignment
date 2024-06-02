@@ -30,7 +30,7 @@ export default (req, res) => {
       hackathon_sponsor: 'Deribet',
       hackathon_price: '500',
       hackathon_position: '1st',
-      hackathon_domains: ['Frontend', 'Backend', 'Blockchain'],
+      hackathon_domains: ['Frontend', 'Backend', 'Blockchain',],
       hackathon_date: 'March 14 2023',
       participants_count: '20',
     },

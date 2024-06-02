@@ -1,11 +1,8 @@
-import { useState } from 'react';
 import Link from 'next/link';
 import styles from './NavigationBar.module.scss';
-import Image from 'next/image';
+import NavigationBarFiletrs from './NavigationBarFilters';
 
 function NavigationBar({ type }) {
-    const [filter, setFilter] = useState('ALL');
-
     return (
         <div className={styles['navigationBarContainer']}>
             <div className={styles['navigationBarContainer_navigationBar']}>
@@ -39,22 +36,7 @@ function NavigationBar({ type }) {
                 </nav>
             </div>
             <div className={styles['navigationBarContainer_filters']}>
-                <div className={styles['navigationBarContainer_filters--divider']}/>
-                <Image src="/assets/icons/filter.svg" alt="filter-icon" width={16} height={9.5} />
-                <label htmlFor="filterDropdown" className={styles['navigationBarContainer_filters--label']}>Filter By:</label>
-                <select
-                    id="filterDropdown"
-                    className={styles['navigationBarContainer_filters--dropdown']}
-                    value={filter}
-                    onChange={(e) => setFilter(e.target.value)}
-                >
-                    <option value="ALL">ALL</option>
-                    <option value="Design">Design</option>
-                    <option value="Frontend">Frontend</option>
-                    <option value="Backend">Backend</option>
-                    <option value="Blockchain">Blockchain</option>
-                    <option value="Content">Content</option>
-                </select>
+                <NavigationBarFiletrs />
             </div>
         </div>
     );

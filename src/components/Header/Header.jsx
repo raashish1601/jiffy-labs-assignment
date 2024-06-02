@@ -33,7 +33,7 @@ const Header = () => {
       <HeaderSearchBar />
       <div className={styles['header_userSection']}>
         <UserProfile />
-        <Image src="/assets/icons/Theme.svg" alt="theme-icon" width={50} height={50} className={styles['header_userSection_themeImage']} />
+        <Image src="/assets/icons/theme.svg" alt="theme-icon" width={20} height={20} />
       </div>
     </header>
   );
