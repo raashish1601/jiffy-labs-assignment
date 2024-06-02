@@ -1,6 +1,7 @@
 import Image from "next/image";
 import HackathonDomainCard from "./HackathonDomainCard";
 import styles from './HackathonCard.module.scss';
+import { getCompressedCount } from "@/utils";
 
 function HackathonCard({ cardData }) {
 
@@ -28,7 +29,7 @@ function HackathonCard({ cardData }) {
                             <>
                                 <div className={styles['hackathonCard_details_content_userDetails--price']}>
                                     <Image src='/assets/icons/price.svg' alt="price-svg" width={13.71} height={13.71} />&nbsp;
-                                    {cardData?.hackathon_price}&nbsp;<span>USDC</span>
+                                    {getCompressedCount(cardData?.hackathon_price)}&nbsp;<span>USDC</span>
                                 </div>
                                 <div className={styles['hackathonCard_details_content_userDetails--divider']}></div>
                             </>
@@ -59,7 +60,7 @@ function HackathonCard({ cardData }) {
             <div className={styles['hackathonCard_info']}>
                 <div className={styles['hackathonCard_info--date']}>{formattedDate}</div>
                 <div className={styles['hackathonCard_info--participantsCount']}>
-                    {cardData?.participants_count}&nbsp;<span>Participants</span>
+                    {getCompressedCount(cardData?.participants_count)}&nbsp;<span>Participants</span>
                 </div>
             </div>
         </div>
