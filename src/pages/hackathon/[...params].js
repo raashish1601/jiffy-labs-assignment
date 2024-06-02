@@ -12,7 +12,6 @@ function Hackathon() {
     const { data, fetchData } = useFetch();
 
     useEffect(() => {
-        console.log("router", router);
         const { params } = router.query;
         if (!params) return;
 
