@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import HackathonLayout from "@/components/HackathonLayout";
+import HackathonLayout from "@/layouts/HackathonLayout/HackathonLayout";
 import HackathonContent from "@/components/HackathonContent/HackathonContent";
 import useFetch from "@/hooks/use-fetch";
 import { FILTER_OPTIONS } from "@/constants";

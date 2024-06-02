@@ -1,5 +1,5 @@
 import NavigationBar from "@/components/NavigationBar/NavigationBar";
-import SearchBar from "./SearchBar/SearchBar";
+import SearchBar from "../../components/SearchBar/SearchBar";
 import styles from './HackathonLayout.module.scss';
 
 function HackathonLayout({ children, type }) {
