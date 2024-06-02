@@ -10,11 +10,11 @@
         display: flex;
         flex-direction: column;
         flex: 1;
+        padding-right: 25px;
     }
 
     &>div {
         border-right: 1px solid #EBEBEB;
-
     }
 }
 
