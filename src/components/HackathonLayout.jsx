@@ -5,11 +5,13 @@ import styles from './HackathonLayout.module.scss';
 function HackathonLayout({ children, type }) {
     return (
         <div className={styles['hackathonLayout']}>
-            <div>
+            <div className={styles['hackathonLayout_mainContainer']}>
                 <NavigationBar type={type} />
                 {children}
             </div>
-            <SearchBar />
+            <aside>
+                <SearchBar />
+            </aside>
         </div>
     )
 };

@@ -3,10 +3,10 @@
 .navigationBarContainer {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 35px;
     border-bottom: 2px solid #EBEBEB;
-    padding-bottom: 25px;
+    padding-bottom: 20px;
     width: 98%;
     margin-top: 20px;
 
@@ -17,7 +17,7 @@
 
         &_history {
             color: #252424;
-            @include typography('Inter', 20px, 600, 28px);
+            @include typography('Inter', 18px, 600, 28px);
         }
 
         &--divider {
@@ -31,10 +31,10 @@
             gap: 24px;
 
             &>a {
-                position:relative;
+                position: relative;
                 text-decoration: none;
                 color: #64758B;
-                @include typography('Inter', 18px, 400, 21.78px);
+                @include typography('Inter', 16px, 400, 21.78px);
             }
 
             &--navItem {
@@ -43,7 +43,7 @@
 
             &--divider {
                 border-bottom: 2px solid #6366F1;
-                top: 53px;
+                top: 48px;
                 position: absolute;
                 width: 100%;
             }
@@ -55,9 +55,9 @@
         gap: 16px;
         align-items: center;
 
-        &--divider{
+        &--divider {
             border: 1px solid #CBD8E9;
-            height:22px;
+            height: 22px;
         }
 
         &>label {
@@ -74,6 +74,7 @@
             color: #6366F1;
             display: flex;
             align-items: center;
+            outline: none !important;
             @include typography('Inter', 14px, 500, 18px);
         }
     }

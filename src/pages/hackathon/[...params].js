@@ -27,11 +27,11 @@ function Hackathon() {
     }, [router, router?.query]);
 
     return (
-        <div>
+        <main tabIndex={-1}>
             <HackathonLayout type={type}>
                 <HackathonContent hackathonData={data} />
             </HackathonLayout>
-        </div>
+        </main>
     );
 }
 

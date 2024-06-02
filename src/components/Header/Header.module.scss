@@ -3,10 +3,11 @@
 .header {
     height: 80px;
     width: 100%;
+    max-width: 1800px;
     background-color: #fff;
-    padding: 1rem;
+    padding: 2rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 
     &_navList {
@@ -39,4 +40,11 @@
         }
     }
     
+}
+
+@media (min-width:1800px){
+    .header {
+        padding: 2rem 0;
+        margin: 0 auto;
+    }
 }

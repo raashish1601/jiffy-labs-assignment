@@ -1,11 +1,26 @@
-.hackathonLayout{
+.hackathonLayout {
     display: flex;
     align-items: baseline;
-    justify-content: center;
-    gap:30px;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 0 2rem;
+    max-width: 1800px;
 
-    &>div{
+    &_mainContainer {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    &>div {
         border-right: 1px solid #EBEBEB;
 
+    }
+}
+
+@media (min-width:1800px){
+    .hackathonLayout {
+        padding: 0;
+        margin: 0 auto;
     }
 }
