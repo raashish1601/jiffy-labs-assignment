@@ -60,6 +60,7 @@
 
                 &--position {
                     color: #64758B;
+                    min-width: fit-content;
                     @include typography('Inter', 14px, 400, 18px);
                 }
 
