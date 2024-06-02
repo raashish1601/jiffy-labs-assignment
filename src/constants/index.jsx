@@ -16,3 +16,6 @@ export const domainCardsColorScheme = [
         text_color: '#FF3EC9',
     },
 ];
+
+
+export const FILTER_OPTIONS = ["ALL", "Design", "Frontend", "Backend", "Blockchain", "Content"];

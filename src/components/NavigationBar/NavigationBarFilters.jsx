@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import styles from './NavigationBar.module.scss';
+import { FILTER_OPTIONS } from '@/constants';
 
 function NavigationBarFilters({ }) {
     const router = useRouter();
@@ -26,12 +26,9 @@ function NavigationBarFilters({ }) {
                 value={router?.query?.filterBy ?? "ALL"}
                 onChange={handleFilterChange}
             >
-                <option value="ALL">ALL</option>
-                <option value="Design">Design</option>
-                <option value="Frontend">Frontend</option>
-                <option value="Backend">Backend</option>
-                <option value="Blockchain">Blockchain</option>
-                <option value="Content">Content</option>
+                {FILTER_OPTIONS.map(option => (
+                    <option key={option} value={option}>{option}</option>
+                ))}
             </select>
         </>
     );
